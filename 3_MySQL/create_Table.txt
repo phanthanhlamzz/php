@@ -1,0 +1,21 @@
+CREATE DATABASE salesmanager CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+CREATE TABLE product (
+    masp int unsigned NOT NULL auto_increment,
+    tensp varchar(255) NOT NULL,
+    keyword varchar(255) NOT NULL,
+    gianhap INT(255) DEFAULT 0,
+    giavon INT(255) DEFAULT 0,
+    giabuhang INT(255) DEFAULT 0,
+    giabansi INT(255) DEFAULT 0,
+    giatinh INT(255) DEFAULT 0,
+    giataphoa INT(255) DEFAULT 0,
+    giabanle INT(255) DEFAULT 0,
+    soluongsp BIGINT(225) DEFAULT 0,
+    donvitinh varchar(255),
+    hinhanhsp LONGTEXT,
+    thongtinsp LONGTEXT,
+    ghichu LONGTEXT,
+    PRIMARY KEY(masp));
+
+  ALTER TABLE product ADD FULLTEXT (keyword);
